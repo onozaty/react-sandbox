@@ -1,10 +1,20 @@
 import React from 'react';
-import './App.css';
 import Todo from './Todo';
+import makeStyles from '@material-ui/styles/makeStyles';
+
+const useStyles = makeStyles({
+  app: {
+    textAlign: 'left',
+    margin: 10
+  }
+});
 
 function App() {
+
+  const classes = useStyles();
+
   return (
-    <div className="App">
+    <div className={classes.app}>
       <Todo />
     </div>
   );
