@@ -1,11 +1,11 @@
 module.exports = {
-  "env": {
-    "browser": true,
-    "es2021": true
+  env: {
+    browser: true,
+    es2021: true,
   },
-  "extends": [
-    "plugin:react/recommended",
-    "airbnb",
+  extends: [
+    'plugin:react/recommended',
+    'airbnb',
     'airbnb/hooks',
     'plugin:import/errors',
     'plugin:import/warnings',
@@ -14,34 +14,33 @@ module.exports = {
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'prettier',
   ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
     },
-    "ecmaVersion": 12,
-    "project": './tsconfig.eslint.json',
-    "sourceType": "module",
-    "tsconfigRootDir": __dirname,
+    ecmaVersion: 12,
+    project: './tsconfig.eslint.json',
+    sourceType: 'module',
+    tsconfigRootDir: __dirname,
   },
-  "plugins": [
-    "@typescript-eslint",
+  plugins: [
+    '@typescript-eslint',
     'import',
     'jsx-a11y',
-    "react",
+    'prefer-arrow',
+    'react',
     'react-hooks',
   ],
-  "rules": {
+  rules: {
     'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': [
-      'error',
-    ],
+    '@typescript-eslint/no-use-before-define': ['error'],
     'lines-between-class-members': [
       'error',
       'always',
       {
-        exceptAfterSingleLine: true
-      }
+        exceptAfterSingleLine: true,
+      },
     ],
     'no-void': [
       'error',
@@ -60,11 +59,11 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': [
       'error',
       {
-        'vars': 'all',
-        'args': 'after-used',
-        'argsIgnorePattern': '_',
-        'ignoreRestSiblings': false,
-        'varsIgnorePattern': '_',
+        vars: 'all',
+        args: 'after-used',
+        argsIgnorePattern: '_',
+        ignoreRestSiblings: false,
+        varsIgnorePattern: '_',
       },
     ],
     'import/extensions': [
@@ -75,13 +74,13 @@ module.exports = {
         jsx: 'never',
         ts: 'never',
         tsx: 'never',
-      }
+      },
     ],
     'react/jsx-filename-extension': [
       'error',
       {
-        extensions: ['.jsx', '.tsx']
-      }
+        extensions: ['.jsx', '.tsx'],
+      },
     ],
     'react/jsx-props-no-spreading': [
       'error',
@@ -92,11 +91,19 @@ module.exports = {
       },
     ],
     'react/react-in-jsx-scope': 'off',
+    'prefer-arrow/prefer-arrow-functions': [
+      'error',
+      {
+        disallowPrototype: true,
+        singleReturnOnly: false,
+        classPropertiesAllowed: false,
+      },
+    ],
   },
   overrides: [
     {
-      'files': ['*.tsx'],
-      'rules': {
+      files: ['*.tsx'],
+      rules: {
         'react/prop-types': 'off',
       },
     },
