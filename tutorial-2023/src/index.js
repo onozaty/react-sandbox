@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
-function Square(props) {
+const Square = (props) => {
   return (
     <button
       className="square"
@@ -13,7 +13,7 @@ function Square(props) {
   );
 }
 
-function Board(props) {
+const Board = (props) => {
 
   const renderSquare = (i) => {
     return (
@@ -45,7 +45,7 @@ function Board(props) {
   );
 }
 
-function Game(props) {
+const Game = (props) => {
 
   const [history, setHistory] = useState([{
     squares: Array(9).fill(null),
@@ -111,7 +111,7 @@ function Game(props) {
   );
 }
 
-function calculateWinner(squares) {
+const calculateWinner = (squares) => {
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
